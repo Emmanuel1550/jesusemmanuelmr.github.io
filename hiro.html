@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Aframe with AR</title>
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs>
+
+        <a-marker-camera preset='hiro'>
+            <a-box color="#ebb084" width="1" height="1" depth="1" position="0 2 0">
+                <!--Cabello enfrente -->
+                <a-plane color="#4d2315" width="1" height=".25" position="0 .38 .501">
+                    <!--Cuadritos de cabello -->
+                    <a-plane color="#4d2315" width=".15" height=".15" position=".425 -.2 0">
+                    </a-plane>
+                    <a-plane color="#4d2315" width=".15" height=".15" position="-.425 -.2 0">
+                    </a-plane>
+                </a-plane>
+                <!--Cabello arriba -->
+                <a-plane color="#4d2315" position="0 .501 0" rotation="-90 0 0">
+                </a-plane>
+                <!--Lados cabeza-->
+                <a-plane color="#4d2315" position=".501 .230 0.001" rotation="0 90 0" width="1" height=".546">
+                </a-plane>
+
+                <a-plane color="#4d2315" position="-.501 .230 0.001" rotation="0 -90 0" width="1" height=".546">
+
+                </a-plane>
+                <!-- Cabelo de atras -->
+                </a-plane>
+                <a-plane color="#4d2315" position="0 0 -.501" rotation="-180 0 0"></a-plane>
+
+                <!--Ojo izquierdo -->
+                <a-plane color="white" width=".30" height=".12" position="-.200 -.05 .501">
+                    <a-plane color="#434a69" width=".15" height=".12" position=".075 0 .001">
+
+                    </a-plane>
+                </a-plane>
+                <!--Ojo derecho -->
+                <a-plane color="white" width=".30" height=".12" position=".200 -.05 .501">
+                    <a-plane color="#434a69" width=".15" height=".12" position="-.075 0 .001">
+
+                    </a-plane>
+                </a-plane>
+
+
+            </a-box>
+
+            <a-sky color="#ECECEC"></a-sky>
+        </a-marker-camera>
+    </a-scene>
+
+</body>
+
+</html>
